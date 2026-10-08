@@ -1,7 +1,7 @@
 def total_registered_cases(dic: dict, country: str) -> int:
     """
     7)
-    Create a function called "total_registered_case" that has 2 parameters:
+    Create a function called "total_registered_cases" that has 2 parameters:
     1) The data structure described above.
     2) A string with the country name.
 
@@ -44,3 +44,12 @@ def country_with_most_cases(dic: dict) -> str:
     total_cases = total_registered_cases_per_country(dic)
 
     return max(total_cases, key=total_cases.get)
+
+if __name__ == "__main__":
+
+    # Tests
+    example_dic = {"Spain": [1, 24, 2, 5, 2, 9], "Singapore": [2, 45, 1, 5, 2, 4], "Slovakia": [4, 2, 6, 2, 4, 7, 9]}
+
+    print(total_registered_cases(example_dic, "Spain"))
+    print(total_registered_cases_per_country(example_dic))
+    print(country_with_most_cases(example_dic))
